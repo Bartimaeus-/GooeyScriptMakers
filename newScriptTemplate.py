@@ -17,7 +17,7 @@ def runCommand(args):
     
     print("Complete. Output Saved to : ", outputFileName)
 
-# Put initialization for the 
+# Put initialization for the Gooey here (this includes arguments)
 def initGooey(parser):
     
     parser.add_argument('inputFiles',help='The name of the input file(s), including file extension',widget='MultiFileChooser',nargs='+')
