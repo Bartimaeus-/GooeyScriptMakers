@@ -11,9 +11,11 @@ def runCommand(args):
         if args.outputFileName != '':
             outputFileName = args.outputFileName
         else:
-            outputFileName = 'output_' + inputFile #prefix
+            outputFileName = os.path.dirname(inputFile) + os.sep + 'output_' + os.path.basename(inputFile) #prefix. Useful reference: https://note.nkmk.me/en/python-os-basename-dirname-split-splitext/
             # suffix (line below)
             # outputFileName = os.path.splitext(inputFile)[0] + '_output' + os.path.splitext(inputFile)[1]
+    
+    print("Complete. Output Saved to : ", outputFileName)
 
 # Put initialization for the 
 def initGooey(parser):
